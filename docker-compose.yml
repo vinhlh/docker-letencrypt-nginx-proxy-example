@@ -38,7 +38,8 @@ services:
     image: nginx
     container_name: vinh-ninja
     volumes:
-      - "./volumes/vinh-ninja/conf.d/:/etc/nginx/conf.d"
+      - "./volumes/vinh.ninja/conf.d/:/etc/nginx/conf.d"
+      - "./volumes/vinh.ninja/www:/usr/share/nginx/html"
     environment:
       - VIRTUAL_HOST=vinh.ninja
       - VIRTUAL_NETWORK=nginx-proxy
